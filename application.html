@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet">
+	<title>BJERG: Application Form</title>
+</head>
+
+<body>
+	<!-- modified code for mainHeader, div, nav, ul from codepen Craig shared with me
+	"basic navbar with logo - side by side" by Wajahat Rasool:
+	https://codepen.io/wajahat/pen/ORXvop?editors=1100-->
+	<header class="mainHeader">
+		<div class="bjerg_logo">
+			<!-- <a href="index.html"><img src="images/bjerg logo.svg" alt="BJERG" class="logo"></a> -->
+			<a href="index.html">BJERG</a>
+		</div>
+		<!--    Hamburger menu, reference by Erik Terwan's Codepen: https://codepen.io/erikterwan/pen/EVzeRP    -->
+
+		<nav role="navigation">
+			<div id="menuToggle">
+				<!-- A fake / hidden checkbox is used as click reciever,
+	    so you can use the :checked selector on it. -->
+				<input type="checkbox" />
+
+				<!-- Spans make up the icon -->
+				<span></span>
+				<span></span>
+				<span></span>
+
+				<ul id="menu">
+					<li><a href="index.html">BJERG</a></li>
+					<li><a href="betterworld.html">A BETTER WORLD</a></li>
+					<li><a href="bubble.html">ABOUT THE BUBBLE</a></li>
+					<li><a href="security.html">SECURITY & MAINTENANCE</a></li>
+					<li><a class="active" href="application.html">APPLY NOW</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+	<h1>APPLICATION</h1>
+	<!-- used forms on CodeAcademy HTML lesson for reference:
+	https://www.codecademy.com/learn/learn-html/modules/learn-html-forms/cheatsheet -->
+	<section id="overlay">
+		<!-- Not sure how to use method="POST" to collect submitted responses -->
+		<form action="submission.html" method="POST">
+			<h4>Our program is not suited for everyone and not everyone is suited for our program.
+				This form will help us evaluate who you are as a person and if BJERG is the right choice
+				for you.</h4>
+			<section class="textentry">
+				<label for="name">Your name (optional and doesn't have to be real):</label>
+				<input type="text" name="name" id="name">
+			</section>
+			<!-- <hr> -->
+			<section>
+				<label for="philosopher">Which of these philosophers' ideology resonate most with you? You can choose more than one option.</label>
+				<br>
+				<input type="checkbox" name="philosopher" id="Plato">
+				<label for="plato">Plato</label>
+				<input type="checkbox" name="philosopher" id="Socrates">
+				<label for="socrates">Socrates</label>
+				<input type="checkbox" name="philosopher" id="Marx">
+				<label for="marx">Marx</label>
+				<input type="checkbox" name="philosopher" id="Lao-Tzu">
+				<label for="lao-tzu">Lao-Tzu</label>
+				<input type="checkbox" name="philosopher" id="Kant">
+				<label for="kant">Kant</label>
+				<input type="checkbox" name="philosopher" id="Descartes">
+				<label for="descartes">Descartes</label>
+				<input type="checkbox" name="philosopher" id="Confucius">
+				<label for="confucius">Confucius</label>
+				<input type="checkbox" name="philosopher" id="Ramanuja">
+				<label for="Ramanuja">Ramanuja</label>
+				<input type="checkbox" name="philosopher" id="Otherphilosopher">
+				<label for="otherphilosopher">Other - Please specify here: </label>
+				<input type="text" name="otherphilosopher" id="otherphilosopher">
+			</section>
+			<!-- <hr> -->
+			<section>
+				<label for="interests">What are some of your personal or scholarly interests?</label>
+				<br>
+				<textarea id="interests" name="interests" rows="3" cols="60"></textarea>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<label for="passion">How badly do you want to be a part of this project?</label>
+				<br>
+				<span>Mildly Interested</span>
+				<input type="range" name="passion" id="passion" value="3" min="1" max="5">
+				<span>Highly Desired</span>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<label for="personal">What potential problems do you anticipate arising if you joined BJERG? How do you plan to deal with things like that?</label>
+				<br>
+				<textarea id="problems" name="problems" rows="3" cols="60"></textarea>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<span>Are you interested in art or literature? Favorites?</span>
+				<br>
+				<textarea id="art" name="art" rows="3" cols="60"></textarea>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<span>Are you trying to escape something?</span>
+				<br>
+				<input type="radio" name="escape" id="yes" value="yes">
+				<label for="yes">Yes</label>
+				<input type="radio" name="escape" id="no" value="no">
+				<label for="no">No</label>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<span>Are you interested in psychonautics?</span>
+				<br>
+				<input type="radio" name="psyche" id="yes" value="yes">
+				<label for="yes">Yes</label>
+				<input type="radio" name="psyche" id="no" value="no">
+				<label for="no">No</label>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<label for="extra">Briefly describe your thoughts on the following and their interconnections: Politics, Religion, Neoliberalism, Privacy</label>
+				<br>
+				<textarea id="fourwords" name="fourwords" rows="3" cols="60"></textarea>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<span>Would you be willing and able to reject all preconceived notions of human society as we knew it in the old world?</span>
+				<br>
+				<input type="radio" name="reject" id="yes" value="yes">
+				<label for="yes">Yes</label>
+				<input type="radio" name="reject" id="no" value="no">
+				<label for="no">No</label>
+			</section>
+			<!-- <hr> -->
+			<section>
+				<span>How does the idea of transforming from a human into a new form of being made up of raw data sound to you?</span>
+				<br>
+				<input type="radio" name="transform" id="liberating" value="liberating">
+				<label for="yes">Liberating</label>
+				<input type="radio" name="transform" id="horrifying" value="horrifying">
+				<label for="no">Horrifying</label>
+			</section>
+			<!-- <hr> -->
+			<section class="submitbtn">
+				<h4>
+					<a href="submission.html">SUBMIT</a>
+				</h4>
+			</section>
+	</section>
+	</form>
+	</section>
+</body>
+
+</html>
